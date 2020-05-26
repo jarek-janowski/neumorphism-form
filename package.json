@@ -1,0 +1,25 @@
+{
+  "name": "neumorphims-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarek-janowski/neumorphism-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarek-janowski/neumorphism-form/issues"
+  },
+  "homepage": "https://github.com/jarek-janowski/neumorphism-form#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
