@@ -9,9 +9,13 @@ html {
 :root {
   --neumorphism: -12px -12px 12px 0 rgba(255, 255, 255, .3),
         12px 12px 12px 0 rgba(0, 0, 0, .07);
-  --neumorphism-inset: inset -12px -12px 12px 0 rgba(255, 255, 255, .3),
+  --neumorphism__inset: inset -12px -12px 12px 0 rgba(255, 255, 255, .3),
         inset 12px 12px 12px 0 rgba(0, 0, 0, .07);
-  --neumorphism-inset__focus: inset -12px -12px 12px 0 rgba(200, 200, 200, .1),
+  --neumorphism__inset--focus: inset -12px -12px 12px 0 rgba(200, 200, 200, .1),
+        inset 12px 12px 12px 0 rgba(0, 0, 0, .07);
+  --neumorphism--dark: -12px -12px 12px 0 rgba(77, 77, 77, .3),
+        12px 12px 12px 0 rgba(0, 0, 0, .07);
+  --neumorphism__inset--dark: inset -12px -12px 12px 0 rgba(77, 77, 77, .3),
         inset 12px 12px 12px 0 rgba(0, 0, 0, .07); }
 
 .body {
@@ -22,6 +26,18 @@ html {
   background: #d2d2d2;
   font-family: 'Lato', sans-serif;
   color: #48A9A6; }
+  .body--dark-background {
+    background: #1c1c1c; }
+
+.dark-theme {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border: none;
+  color: white;
+  background: #000; }
 
 .main {
   width: 90%;
@@ -37,6 +53,11 @@ html {
     border-radius: 16px;
     text-align: center;
     padding: 5px 0; }
+    .main__heading--dark-background {
+      background: #3b3b3b;
+      box-shadow: var(--neumorphism--dark); }
+  .main--dark-background {
+    background: #3b3b3b; }
 
 .form__input {
   display: block;
@@ -45,11 +66,14 @@ html {
   margin-top: 10px;
   border: none;
   background: #eee;
-  box-shadow: var(--neumorphism-inset);
+  box-shadow: var(--neumorphism__inset);
   border-radius: 8px; }
   .form__input:focus {
     outline: none;
-    box-shadow: var(--neumorphism-inset__focus); }
+    box-shadow: var(--neumorphism__inset--focus); }
+  .form__input--dark-input {
+    background: #3b3b3b;
+    box-shadow: var(--neumorphism__inset--dark); }
 
 .fieldset {
   border: none;
@@ -58,6 +82,8 @@ html {
   border-radius: 16px; }
   .fieldset__heading {
     text-align: start; }
+  .fieldset--dark-background {
+    box-shadow: var(--neumorphism--dark); }
 
 .submit__button {
   display: block;
@@ -71,3 +97,6 @@ html {
   padding: 10px 0;
   color: inherit;
   box-shadow: var(--neumorphism); }
+  .submit__button--dark-background {
+    background: #3b3b3b;
+    box-shadow: var(--neumorphism--dark); }
