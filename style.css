@@ -46,9 +46,12 @@ html {
   padding: 0 20px;
   background: #eee;
   border-radius: 16px; }
+  @media screen and (min-width: 768px) {
+    .main {
+      width: 50%; } }
   .main__heading {
     width: 80%;
-    margin: 20px auto;
+    margin: 20px auto 40px;
     background: #eee;
     box-shadow: var(--neumorphism);
     border-radius: 16px;
@@ -68,9 +71,11 @@ html {
   border: none;
   background: #eee;
   box-shadow: var(--neumorphism__inset);
-  border-radius: 8px; }
+  border-radius: 8px;
+  padding: 0 8px; }
   .form__input--story {
-    height: 200px; }
+    height: 200px;
+    padding: 8px 8px; }
   .form__input::placeholder {
     color: #bbb; }
   .form__input:focus {
@@ -92,6 +97,16 @@ html {
     text-align: start; }
   .fieldset--dark-background {
     box-shadow: var(--neumorphism--dark); }
+
+.radio {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 50px; }
+
+.radio-button {
+  margin: 0 5px 0 20px; }
+  .radio-button--special {
+    margin-left: 0; }
 
 .submit__button {
   display: block;

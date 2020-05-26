@@ -37,7 +37,8 @@
 
             <p>
                 <label for="email">Email:
-                    <input class="form__input form__input--email-js" required id="email" name="email" type="email">
+                    <input class="form__input form__input--email-js" placeholder="example@gmail.com" required id="email"
+                        name="email" type="email">
                 </label>
             </p>
 
@@ -45,13 +46,6 @@
                 <label for="password">Password:
                     <input class="form__input form__input--password-js" id="password" name="password" type="password">
                 </label>
-            </p>
-
-            <p>
-                <label for="yourStory">Your Story:</label>
-                <textarea class="form__input form__input--story form__input--story-js" name="yourStory"
-                    id="yourStory"></textarea>
-
             </p>
 
             <fieldset class="fieldset fieldset--js">
@@ -73,11 +67,24 @@
                     </label>
                 </p>
             </fieldset>
+
             <p>
-                <label> <input class="check" name="agreement" type="checkbox" value="agree" id="check"> Agree
-                </label>
+                <label for="yourStory">Your Story:</label>
+                <textarea class="form__input form__input--story form__input--story-js" name="yourStory"
+                    id="yourStory"></textarea>
+
             </p>
-            <p class="submit">
+
+            <p>
+                <div class="radio">
+                    <label> <input name="radio" type="radio" value="male">
+                        Male
+                    </label>
+                    <label> <input name="radio" type="radio" value="female"> Female
+                    </label>
+                </div>
+            </p>
+            <p>
                 <input class="submit__button submit__button--js" type="submit" value="Send" id="submit">
             </p>
         </form>
