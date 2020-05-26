@@ -5,26 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neumorphism form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <main>
-        <h1 class="main-heading">Contact Form</h1>
-        <form method="post" action="https://dev.cotenfrontend.pl" class="form">
+<body class="body">
+    <main class="main">
+        <h1 class="main__heading">Contact Form</h1>
+        <form method="post" action="https://dev.cotenfrontend.pl" class="main__form">
 
             <p>
                 <label for="firstName">Your first name:
-                    <input class="form__input" placeholder="Enter your first name" id="firstName" name="firstName"
-                        type="text">
+                    <input class="form__input" id="firstName" name="firstName" type="text">
                 </label>
             </p>
 
             <p>
                 <label for="lastName">Your last name:
-                    <input class="form__input" placeholder="Enter your last name" id="lastName" name="lastName"
-                        type="text">
+                    <input class="form__input" id="lastName" name="lastName" type="text">
                 </label>
             </p>
 
@@ -37,35 +36,32 @@
 
             <p>
                 <label for="email">Email:
-                    <input class="form__input" required placeholder="Enter your email" id="email" name="email"
-                        type="email">
+                    <input class="form__input" required id="email" name="email" type="email">
                 </label>
             </p>
 
             <p>
                 <label for="password">Password:
-                    <input class="form__input" placeholder="Enter your password" id="password" name="password"
-                        type="password">
+                    <input class="form__input" id="password" name="password" type="password">
                 </label>
             </p>
 
             <p>
                 <label for="yourStory">Your Story:</label>
-                <textarea class="form__textarea" name="yourStory" id="yourStory">My strory is...</textarea>
+                <textarea class="form__input--textarea" name="yourStory" id="yourStory"></textarea>
 
             </p>
 
-            <fieldset>
-                <legend>Adress</legend>
+            <fieldset class="fieldset">
+                <h2 class="fieldset__heading">Adres</h2>
                 <p>
                     <label for="streetName">Street name:
-                        <input class="form__input" placeholder="Enter street name" id="streetName" name="streetName"
-                            type="text">
+                        <input class="form__input" id="streetName" name="streetName" type="text">
                     </label>
                 </p>
                 <p>
                     <label for="city">City:
-                        <input class="form__input" placeholder="Enter your city" id="city" name="city" type="text">
+                        <input class="form__input" id="city" name="city" type="text">
                     </label>
                 </p>
                 <p>
