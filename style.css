@@ -6,6 +6,14 @@ html {
 *:after {
   box-sizing: inherit; }
 
+:root {
+  --neumorphism: -12px -12px 12px 0 rgba(255, 255, 255, .3),
+        12px 12px 12px 0 rgba(0, 0, 0, .07);
+  --neumorphism-inset: inset -12px -12px 12px 0 rgba(255, 255, 255, .3),
+        inset 12px 12px 12px 0 rgba(0, 0, 0, .07);
+  --neumorphism-inset__focus: inset -12px -12px 12px 0 rgba(200, 200, 200, .1),
+        inset 12px 12px 12px 0 rgba(0, 0, 0, .07); }
+
 .body {
   display: flex;
   min-height: 100vh;
@@ -25,7 +33,7 @@ html {
     width: 80%;
     margin: 20px auto;
     background: #eee;
-    box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.3), 12px 12px 12px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: var(--neumorphism);
     border-radius: 16px;
     text-align: center;
     padding: 5px 0; }
@@ -37,15 +45,29 @@ html {
   margin-top: 10px;
   border: none;
   background: #eee;
-  box-shadow: inset -12px -12px 12px 0 rgba(255, 255, 255, 0.3), inset 12px 12px 12px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: var(--neumorphism-inset);
   border-radius: 8px; }
-  .form__input--textarea {
-    display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: var(--neumorphism-inset__focus); }
 
 .fieldset {
   border: none;
   margin: 0 10px;
-  box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.3), 12px 12px 12px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: var(--neumorphism);
   border-radius: 16px; }
   .fieldset__heading {
     text-align: start; }
+
+.submit__button {
+  display: block;
+  margin: 0 auto;
+  background: #eee;
+  margin: 0 auto;
+  border: none;
+  border-radius: 16px;
+  width: 90%;
+  font-size: 22px;
+  padding: 10px 0;
+  color: inherit;
+  box-shadow: var(--neumorphism); }
