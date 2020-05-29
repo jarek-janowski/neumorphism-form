@@ -35,21 +35,76 @@ html {
     color: var(--color);
 }
 
-.dark-theme {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    border: none;
-    color: white;
-    background: #000;
+.switch {
+
+    position: absolute;
+    top: 16px;
+    right: 70px;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__slider {
+
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 25px;
+        background: var(--main-background);
+        transition: .5s;
+        box-shadow: var(--neumorphism__inset);
+
+
+        &--round {
+
+
+            border-radius: 35px;
+
+            &:before {
+
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+
+                // border-top-left-radius: 50px;
+                // border-top-right-radius: 50px;
+                // transform: rotateZ(-90deg);
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5px;
+            background: var(--color);
+            transition: .5s;
+        }
+    }
+
+
+}
+
+.switch__checkbox:checked+.switch__slider {
+    background-color: var(--main-background);
+
+    &:before {
+
+
+        transform: translateX(22px) translateY(-50%);
+        background: var(--color);
+    }
 }
 
 .main {
+    position: relative;
     width: 90%;
-    margin: 30px 0 50px;
-    padding: 0 20px;
+    margin: 20px 0;
+    padding: 0 20px 10px;
     background: var(--main-background);
     border-radius: 16px;
 
@@ -58,8 +113,8 @@ html {
     }
 
     &__heading {
-        width: 80%;
-        margin: 20px auto 40px;
+        width: 90%;
+        margin: 70px auto 40px;
         box-shadow: var(--neumorphism);
         border-radius: 16px;
         text-align: center;
@@ -96,7 +151,7 @@ html {
 
 .fieldset {
     border: none;
-    margin: 0 10px;
+    margin: 40px 10px;
     box-shadow: var(--neumorphism);
     border-radius: 16px;
 
@@ -110,7 +165,7 @@ html {
 .radio {
     display: flex;
     justify-content: space-around;
-    margin: 0 50px;
+    margin: 30px 50px;
 
 }
 
@@ -125,7 +180,6 @@ html {
 
 .submit__button {
     display: block;
-    margin: 0 auto;
     background: var(--main-background);
     margin: 0 auto;
     border: none;

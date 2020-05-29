@@ -11,8 +11,15 @@
 </head>
 
 <body class="body">
-    <button class="dark-theme dark-theme--js">Dark Theme</button>
+
+
     <main class="main">
+
+        <label class="switch switch--js">
+            <input class="switch__checkbox" type="checkbox">
+            <span class="switch__slider switch__slider--round"></span>
+        </label>
+
         <h1 class="main__heading">Contact Form</h1>
         <form method="post" action="https://dev.cotenfrontend.pl" class="main__form">
 
@@ -69,7 +76,7 @@
 
             <p>
                 <label for="yourStory">Your Story:</label>
-                <textarea class="form__input" name="yourStory" id="yourStory"></textarea>
+                <textarea class="form__input form__input--story" name="yourStory" id="yourStory"></textarea>
 
             </p>
 

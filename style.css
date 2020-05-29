@@ -27,28 +27,56 @@ html {
   font-family: 'Lato', sans-serif;
   color: var(--color); }
 
-.dark-theme {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  border: none;
-  color: white;
-  background: #000; }
+.switch {
+  position: absolute;
+  top: 16px;
+  right: 70px; }
+  .switch__checkbox {
+    display: none; }
+  .switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    background: var(--main-background);
+    transition: .5s;
+    box-shadow: var(--neumorphism__inset); }
+    .switch__slider--round {
+      border-radius: 35px; }
+      .switch__slider--round:before {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%; }
+    .switch__slider:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5px;
+      background: var(--color);
+      transition: .5s; }
+
+.switch__checkbox:checked + .switch__slider {
+  background-color: var(--main-background); }
+  .switch__checkbox:checked + .switch__slider:before {
+    transform: translateX(22px) translateY(-50%);
+    background: var(--color); }
 
 .main {
+  position: relative;
   width: 90%;
-  margin: 30px 0 50px;
-  padding: 0 20px;
+  margin: 20px 0;
+  padding: 0 20px 10px;
   background: var(--main-background);
   border-radius: 16px; }
   @media screen and (min-width: 768px) {
     .main {
       width: 50%; } }
   .main__heading {
-    width: 80%;
-    margin: 20px auto 40px;
+    width: 90%;
+    margin: 70px auto 40px;
     box-shadow: var(--neumorphism);
     border-radius: 16px;
     text-align: center;
@@ -76,7 +104,7 @@ html {
 
 .fieldset {
   border: none;
-  margin: 0 10px;
+  margin: 40px 10px;
   box-shadow: var(--neumorphism);
   border-radius: 16px; }
   .fieldset__heading {
@@ -85,7 +113,7 @@ html {
 .radio {
   display: flex;
   justify-content: space-around;
-  margin: 0 50px; }
+  margin: 30px 50px; }
 
 .radio-button {
   margin: 0 5px 0 20px; }
@@ -94,7 +122,6 @@ html {
 
 .submit__button {
   display: block;
-  margin: 0 auto;
   background: var(--main-background);
   margin: 0 auto;
   border: none;

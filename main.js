@@ -1,10 +1,10 @@
-const darkTheme = document.querySelector('.dark-theme--js');
+const darkTheme = document.querySelector('.switch--js');
 const root = document.documentElement;
 
 
 let darkMode = false;
 
-darkTheme.addEventListener('click', () => {
+darkTheme.addEventListener('change', () => {
     if (darkMode) {
         root.style.setProperty('--color', '#48A9A6');
         root.style.setProperty('--placeholder-color', '#bbb');
