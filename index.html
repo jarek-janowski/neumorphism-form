@@ -10,68 +10,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="body body--js">
+<body class="body">
     <button class="dark-theme dark-theme--js">Dark Theme</button>
-    <main class="main main--js">
-        <h1 class="main__heading main__heading--js">Contact Form</h1>
+    <main class="main">
+        <h1 class="main__heading">Contact Form</h1>
         <form method="post" action="https://dev.cotenfrontend.pl" class="main__form">
 
             <p>
                 <label for="firstName">Your first name:
-                    <input class="form__input form__input--first-name-js" id="firstName" name="firstName" type="text">
+                    <input class="form__input" id="firstName" name="firstName" type="text">
                 </label>
             </p>
 
             <p>
                 <label for="lastName">Your last name:
-                    <input class="form__input form__input--last-name-js" id="lastName" name="lastName" type="text">
+                    <input class="form__input" id="lastName" name="lastName" type="text">
                 </label>
             </p>
 
             <p>
                 <label for="phoneNumber">Phone number:
-                    <input class="form__input form__input--phone-js" placeholder="123-456-789" id="phoneNumber"
-                        name="phoneNumber" type="tel">
+                    <input class="form__input" placeholder="123-456-789" id="phoneNumber" name="phoneNumber" type="tel">
                 </label>
             </p>
 
             <p>
                 <label for="email">Email:
-                    <input class="form__input form__input--email-js" placeholder="example@gmail.com" required id="email"
-                        name="email" type="email">
+                    <input class="form__input" placeholder="example@gmail.com" required id="email" name="email"
+                        type="email">
                 </label>
             </p>
 
             <p>
                 <label for="password">Password:
-                    <input class="form__input form__input--password-js" id="password" name="password" type="password">
+                    <input class="form__input" id="password" name="password" type="password">
                 </label>
             </p>
 
-            <fieldset class="fieldset fieldset--js">
+            <fieldset class="fieldset">
                 <h2 class="fieldset__heading">Adres</h2>
                 <p>
                     <label for="streetName">Street name:
-                        <input class="form__input form__input--street-js" id="streetName" name="streetName" type="text">
+                        <input class="form__input" id="streetName" name="streetName" type="text">
                     </label>
                 </p>
                 <p>
                     <label for="city">City:
-                        <input class="form__input form__input--city-js" id="city" name="city" type="text">
+                        <input class="form__input" id="city" name="city" type="text">
                     </label>
                 </p>
                 <p>
                     <label for="postalCode">Postal code:
-                        <input class="form__input form__input--postal-code-js" placeholder="12-345" id="postalCode"
-                            name="postalCode" pattern="[0-9]{2}-[0-9]{3}">
+                        <input class="form__input" placeholder="12-345" id="postalCode" name="postalCode"
+                            pattern="[0-9]{2}-[0-9]{3}">
                     </label>
                 </p>
             </fieldset>
 
             <p>
                 <label for="yourStory">Your Story:</label>
-                <textarea class="form__input form__input--story form__input--story-js" name="yourStory"
-                    id="yourStory"></textarea>
+                <textarea class="form__input" name="yourStory" id="yourStory"></textarea>
 
             </p>
 
@@ -85,7 +83,7 @@
                 </div>
             </p>
             <p>
-                <input class="submit__button submit__button--js" type="submit" value="Send" id="submit">
+                <input class="submit__button" type="submit" value="Send" id="submit">
             </p>
         </form>
     </main>

@@ -9,16 +9,19 @@ html {
 }
 
 :root {
+
+    --color: #48A9A6;
+    --placeholder-color: #bbb;
+    --body-background: #d2d2d2;
+    --main-background: #eee;
     --neumorphism: -12px -12px 12px 0 rgba(255, 255, 255, .3),
         12px 12px 12px 0 rgba(0, 0, 0, .07);
     --neumorphism__inset: inset -12px -12px 12px 0 rgba(255, 255, 255, .3),
         inset 12px 12px 12px 0 rgba(0, 0, 0, .07);
     --neumorphism__inset--focus: inset -12px -12px 12px 0 rgba(200, 200, 200, .1),
         inset 12px 12px 12px 0 rgba(0, 0, 0, .07);
-    --neumorphism--dark: -12px -12px 12px 0 rgba(77, 77, 77, .3),
-        12px 12px 12px 0 rgba(0, 0, 0, .07);
-    --neumorphism__inset--dark: inset -12px -12px 12px 0 rgba(77, 77, 77, .3),
-        inset 12px 12px 12px 0 rgba(0, 0, 0, .07);
+
+
 
 }
 
@@ -27,14 +30,9 @@ html {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: #d2d2d2;
+    background: var(--body-background);
     font-family: 'Lato', sans-serif;
-    color: #48A9A6;
-
-    &--dark-background {
-        background: #1c1c1c;
-        color: white;
-    }
+    color: var(--color);
 }
 
 .dark-theme {
@@ -52,32 +50,20 @@ html {
     width: 90%;
     margin: 30px 0 50px;
     padding: 0 20px;
-    background: #eee;
+    background: var(--main-background);
     border-radius: 16px;
 
     @media screen and (min-width: 768px) {
         width: 50%;
     }
 
-
-
     &__heading {
         width: 80%;
         margin: 20px auto 40px;
-        background: #eee;
         box-shadow: var(--neumorphism);
         border-radius: 16px;
         text-align: center;
         padding: 5px 0;
-
-        &--dark-background {
-            background: #3b3b3b;
-            box-shadow: var(--neumorphism--dark);
-        }
-    }
-
-    &--dark-background {
-        background: #3b3b3b;
     }
 }
 
@@ -87,10 +73,11 @@ html {
     height: 30px;
     margin-top: 10px;
     border: none;
-    background: #eee;
+    background: var(--main-background);
     box-shadow: var(--neumorphism__inset);
     border-radius: 8px;
     padding: 0 8px;
+    color: var(--color);
 
     &--story {
         height: 200px;
@@ -98,25 +85,13 @@ html {
     }
 
     &::placeholder {
-        color: #bbb;
+        color: var(--placeholder-color);
     }
 
     &:focus {
         outline: none;
         box-shadow: var(--neumorphism__inset--focus);
     }
-
-    &--dark-input {
-        background: #3b3b3b;
-        box-shadow: var(--neumorphism__inset--dark);
-        color: white;
-
-        &::placeholder {
-            color: #5b5b5b;
-        }
-    }
-
-
 }
 
 .fieldset {
@@ -129,9 +104,7 @@ html {
         text-align: start;
     }
 
-    &--dark-background {
-        box-shadow: var(--neumorphism--dark);
-    }
+
 }
 
 .radio {
@@ -153,7 +126,7 @@ html {
 .submit__button {
     display: block;
     margin: 0 auto;
-    background: #eee;
+    background: var(--main-background);
     margin: 0 auto;
     border: none;
     border-radius: 16px;
@@ -162,9 +135,4 @@ html {
     padding: 10px 0;
     color: inherit;
     box-shadow: var(--neumorphism);
-
-    &--dark-background {
-        background: #3b3b3b;
-        box-shadow: var(--neumorphism--dark);
-    }
 }
