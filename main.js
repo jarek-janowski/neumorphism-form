@@ -14,7 +14,7 @@ darkTheme.addEventListener('change', () => {
         root.style.setProperty('--neumorphism__inset', 'inset -12px -12px 12px 0 rgba(255, 255, 255, .3), inset 12px 12px 12px 0 rgba(0, 0, 0, .07)');
         darkMode = false;
     } else {
-        root.style.setProperty('--color', '#fff');
+        root.style.setProperty('--color', '#ddd');
         root.style.setProperty('--placeholder-color', '#5b5b5b');
         root.style.setProperty('--body-background', '#1c1c1c');
         root.style.setProperty('--main-background', '#3b3b3b');

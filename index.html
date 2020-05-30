@@ -21,78 +21,77 @@
         </label>
 
         <h1 class="main__heading">Contact Form</h1>
-        <form method="post" action="https://dev.cotenfrontend.pl" class="main__form">
+        <div class="personal-info">
+            <form method="post" action="#" class="main__form">
 
-            <p>
-                <label for="firstName">Your first name:
-                    <input class="form__input" id="firstName" name="firstName" type="text">
-                </label>
-            </p>
-
-            <p>
-                <label for="lastName">Your last name:
-                    <input class="form__input" id="lastName" name="lastName" type="text">
-                </label>
-            </p>
-
-            <p>
-                <label for="phoneNumber">Phone number:
-                    <input class="form__input" placeholder="123-456-789" id="phoneNumber" name="phoneNumber" type="tel">
-                </label>
-            </p>
-
-            <p>
-                <label for="email">Email:
-                    <input class="form__input" placeholder="example@gmail.com" required id="email" name="email"
-                        type="email">
-                </label>
-            </p>
-
-            <p>
-                <label for="password">Password:
-                    <input class="form__input" id="password" name="password" type="password">
-                </label>
-            </p>
-
-            <fieldset class="fieldset">
-                <h2 class="fieldset__heading">Adres</h2>
                 <p>
-                    <label for="streetName">Street name:
-                        <input class="form__input" id="streetName" name="streetName" type="text">
+                    <label for="firstName">Your first name:
+                        <input class="form__input" id="firstName" name="firstName" type="text" required>
                     </label>
                 </p>
-                <p>
-                    <label for="city">City:
-                        <input class="form__input" id="city" name="city" type="text">
-                    </label>
-                </p>
-                <p>
-                    <label for="postalCode">Postal code:
-                        <input class="form__input" placeholder="12-345" id="postalCode" name="postalCode"
-                            pattern="[0-9]{2}-[0-9]{3}">
-                    </label>
-                </p>
-            </fieldset>
 
+                <p>
+                    <label for="lastName">Your last name:
+                        <input class="form__input" id="lastName" name="lastName" type="text" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label for="phoneNumber">Phone number:
+                        <input class="form__input" placeholder="+48 123-456-789" id="phoneNumber" name="phoneNumber"
+                            type="tel">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="email">Email:
+                        <input class="form__input" required id="email" name="email" type="email">
+                    </label>
+                </p>
+
+                <p>
+                    <div class="radio">
+                        <label class="radio__button"> <input class="radio__button" name="radio" required type="radio"
+                                value="male" id="radio">
+                            Male
+                        </label>
+                        <label class="radio__button"> <input class="radio__button" name="radio" type="radio"
+                                value="female" id="radio"> Female
+                        </label>
+                    </div>
+                </p>
+        </div>
+
+        <fieldset class="fieldset">
+            <h2 class="fieldset__heading">Adress:</h2>
             <p>
-                <label for="yourStory">Your Story:</label>
-                <textarea class="form__input form__input--story" name="yourStory" id="yourStory"></textarea>
-
+                <label for="streetName">Street name and number:
+                    <input class="form__input" id="streetName" placeholder="eg. Ogrodowa 22" name="streetName"
+                        type="text">
+                </label>
             </p>
-
             <p>
-                <div class="radio">
-                    <label> <input name="radio" type="radio" value="male">
-                        Male
-                    </label>
-                    <label> <input name="radio" type="radio" value="female"> Female
-                    </label>
-                </div>
+                <label for="city">City:
+                    <input class="form__input" id="city" name="city" type="text">
+                </label>
+            </p>
+            <p>
+                <label for="postalCode">Postal code:
+                    <input class="form__input" placeholder="12-345" id="postalCode" name="postalCode"
+                        pattern="[0-9]{2}-[0-9]{3}">
+                </label>
+            </p>
+        </fieldset>
+        <div class="additional-info">
+            <p>
+                <label for="additionalInfo">Additional informations:</label>
+                <textarea class="form__input form__input--add" name="additionalInfo" id="additionalInfo"></textarea>
             </p>
             <p>
                 <input class="submit__button" type="submit" value="Send" id="submit">
             </p>
-        </form>
+            </form>
+        </div>
     </main>
     <script src="main.js"></script>
 </body>

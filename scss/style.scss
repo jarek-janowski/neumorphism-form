@@ -103,13 +103,21 @@ html {
 .main {
     position: relative;
     width: 90%;
+    max-width: 500px;
     margin: 20px 0;
     padding: 0 20px 10px;
     background: var(--main-background);
     border-radius: 16px;
 
     @media screen and (min-width: 768px) {
-        width: 50%;
+        min-width: 600px;
+        max-width: 50%;
+        display: grid;
+        grid-template-areas: "main__heading main__heading"
+            "personal-info fieldset"
+            "additional-info additional-info";
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
     }
 
     &__heading {
@@ -119,6 +127,18 @@ html {
         border-radius: 16px;
         text-align: center;
         padding: 5px 0;
+
+        @media screen and (min-width: 768px) {
+            grid-area: main__heading;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.personal-info {
+    @media screen and (min-width: 768px) {
+        grid-area: personal-info;
+        margin-left: 10px;
     }
 }
 
@@ -134,7 +154,7 @@ html {
     padding: 0 8px;
     color: var(--color);
 
-    &--story {
+    &--add {
         height: 200px;
         padding: 8px 8px;
     }
@@ -149,39 +169,52 @@ html {
     }
 }
 
+.radio {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 50px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 40px;
+    }
+}
+
+.radio__button {
+    cursor: pointer;
+}
+
+
 .fieldset {
     border: none;
     margin: 40px 10px;
     box-shadow: var(--neumorphism);
     border-radius: 16px;
 
+    @media screen and (min-width: 768px) {
+        grid-area: fieldset;
+        margin: 0 10px;
+    }
+
     &__heading {
         text-align: start;
+        margin-bottom: 30px;
     }
 
 
 }
 
-.radio {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 50px;
-
-}
-
-.radio-button {
-    margin: 0 5px 0 20px;
-
-    &--special {
-        margin-left: 0;
+.additional-info {
+    @media screen and (min-width: 768px) {
+        grid-area: additional-info;
+        margin: 20px 10px 0;
     }
 }
-
 
 .submit__button {
     display: block;
+    cursor: pointer;
     background: var(--main-background);
-    margin: 0 auto;
+    margin: 40px auto 0;
     border: none;
     border-radius: 16px;
     width: 90%;
@@ -189,4 +222,14 @@ html {
     padding: 10px 0;
     color: inherit;
     box-shadow: var(--neumorphism);
+
+    @media screen and (min-width: 768px) {
+        max-width: 50%;
+
+        &:hover {
+            background: var(--color);
+            color: var(--main-background);
+        }
+    }
+
 }

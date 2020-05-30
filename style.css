@@ -67,13 +67,19 @@ html {
 .main {
   position: relative;
   width: 90%;
+  max-width: 500px;
   margin: 20px 0;
   padding: 0 20px 10px;
   background: var(--main-background);
   border-radius: 16px; }
   @media screen and (min-width: 768px) {
     .main {
-      width: 50%; } }
+      min-width: 600px;
+      max-width: 50%;
+      display: grid;
+      grid-template-areas: "main__heading main__heading" "personal-info fieldset" "additional-info additional-info";
+      grid-template-columns: 1fr 1fr;
+      column-gap: 32px; } }
   .main__heading {
     width: 90%;
     margin: 70px auto 40px;
@@ -81,6 +87,15 @@ html {
     border-radius: 16px;
     text-align: center;
     padding: 5px 0; }
+    @media screen and (min-width: 768px) {
+      .main__heading {
+        grid-area: main__heading;
+        grid-template-columns: 1fr; } }
+
+@media screen and (min-width: 768px) {
+  .personal-info {
+    grid-area: personal-info;
+    margin-left: 10px; } }
 
 .form__input {
   display: block;
@@ -93,7 +108,7 @@ html {
   border-radius: 8px;
   padding: 0 8px;
   color: var(--color); }
-  .form__input--story {
+  .form__input--add {
     height: 200px;
     padding: 8px 8px; }
   .form__input::placeholder {
@@ -102,28 +117,40 @@ html {
     outline: none;
     box-shadow: var(--neumorphism__inset--focus); }
 
+.radio {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 50px; }
+  @media screen and (min-width: 768px) {
+    .radio {
+      margin-top: 40px; } }
+
+.radio__button {
+  cursor: pointer; }
+
 .fieldset {
   border: none;
   margin: 40px 10px;
   box-shadow: var(--neumorphism);
   border-radius: 16px; }
+  @media screen and (min-width: 768px) {
+    .fieldset {
+      grid-area: fieldset;
+      margin: 0 10px; } }
   .fieldset__heading {
-    text-align: start; }
+    text-align: start;
+    margin-bottom: 30px; }
 
-.radio {
-  display: flex;
-  justify-content: space-around;
-  margin: 30px 50px; }
-
-.radio-button {
-  margin: 0 5px 0 20px; }
-  .radio-button--special {
-    margin-left: 0; }
+@media screen and (min-width: 768px) {
+  .additional-info {
+    grid-area: additional-info;
+    margin: 20px 10px 0; } }
 
 .submit__button {
   display: block;
+  cursor: pointer;
   background: var(--main-background);
-  margin: 0 auto;
+  margin: 40px auto 0;
   border: none;
   border-radius: 16px;
   width: 90%;
@@ -131,3 +158,9 @@ html {
   padding: 10px 0;
   color: inherit;
   box-shadow: var(--neumorphism); }
+  @media screen and (min-width: 768px) {
+    .submit__button {
+      max-width: 50%; }
+      .submit__button:hover {
+        background: var(--color);
+        color: var(--main-background); } }
