@@ -41,7 +41,6 @@ html {
     width: 50px;
     height: 25px;
     background: var(--main-background);
-    transition: .5s;
     box-shadow: var(--neumorphism__inset); }
     .switch__slider--round {
       border-radius: 35px; }
